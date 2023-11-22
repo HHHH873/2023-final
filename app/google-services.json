@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "668325477595",
+    "firebase_url": "https://carrotmarket-289bf-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "carrotmarket-289bf",
+    "storage_bucket": "carrotmarket-289bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668325477595:android:792e627d0f5b4ce6f660fe",
+        "android_client_info": {
+          "package_name": "com.example.carrotmarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn7eCtmdipe1EkPO9nRba2FJMR-QsAbks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

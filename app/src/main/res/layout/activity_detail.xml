@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constLayout"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="70dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_image_size"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/profileBg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="@dimen/layout_margin"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/rounded_corner_frofile"
+                app:layout_constraintBottom_toTopOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailImage" />
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user"
+                app:layout_constraintBottom_toBottomOf="@+id/profileBg"
+                app:layout_constraintEnd_toEndOf="@+id/profileBg"
+                app:layout_constraintStart_toStartOf="@+id/profileBg"
+                app:layout_constraintTop_toTopOf="@+id/profileBg"
+                app:tint="@color/white" />
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/layout_margin"
+                android:layout_marginTop="20dp"
+                android:text="nickname"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/profileBg"
+                app:layout_constraintTop_toBottomOf="@+id/detailImage" />
+
+            <TextView
+                android:id="@+id/sellState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="@dimen/layout_margin"
+                android:text="판매중"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FF000000"
+                app:layout_constraintBottom_toTopOf="@+id/detailTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.851"
+                app:layout_constraintStart_toEndOf="@+id/profileBg"
+                app:layout_constraintTop_toBottomOf="@+id/detailImage"
+                app:layout_constraintVertical_bias="0.415" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="#cccccc"
+                app:layout_constraintBottom_toTopOf="@+id/detailTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileBg" />
+
+            <TextView
+                android:id="@+id/detailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin"
+                android:text="detailTitle"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+            <TextView
+                android:id="@+id/detailContent"
+                android:layout_width="381dp"
+                android:layout_height="176dp"
+                android:layout_margin="@dimen/layout_margin"
+                android:paddingBottom="@dimen/layout_margin"
+                android:text=".."
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/detailTitle" />
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="뒤로가기"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:backgroundTint="@color/gray_cc"
+                android:background="@drawable/previous" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="78dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="수정"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="@dimen/layout_margin"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="000,000원"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            android:textColor="#FF000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_marginRight="@dimen/layout_margin"
+            android:layout_marginBottom="@dimen/layout_margin"
+            android:background="@drawable/button"
+            android:text="채팅하기"
+            android:contentDescription="채팅하기"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:stateListAnimator="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
